@@ -5,21 +5,36 @@ class LoginForm extends Component {
     state = {  }
     render() { 
         return (
-            <form action="#" id="loginForm">
-                            <div className="form-group">
-                                <label className="control-label" for="username">Username</label>
-                                <input type="text" placeholder="example@gmail.com" title="Please enter you username" required="" value="" name="username" id="username" class="form-control"></input>
-                                <span className="help-block small">Your unique username to app</span>
+            <div className="container">
+                <div className="row vertical-offset-100">
+                    <div className="col-md-4 col-md-offset-4">
+                        <div className="panel panel-default">
+                            <div className="panel-heading">
+                                <h3 className="panel-title">Please sign in</h3>
                             </div>
-                            <div class="form-group">
-                                <label className="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control"></input>
-                                <span className="help-block small">Yur strong password</span>
+                            <div className="panel-body">
+                                <form accept-charset="UTF-8" role="form">
+                                <fieldset>
+                                    <div className="form-group">
+                                        <input className="form-control" placeholder="E-mail" name="email" type="text"></input>
+                                    </div>
+                                    <div className="form-group">
+                                        <input className="form-control" placeholder="Password" name="password" type="password"></input>
+                                    </div>
+                                    <div className="checkbox">
+                                        <div>
+                                            <input name="remember" type="checkbox" value="Remember Me"></input>
+                                            Remember Me
+                                        </div>
+                                    </div>
+                                    <input className="btn btn-lg btn-success btn-block" type="submit" value="Login"></input>
+                                </fieldset>
+                                </form>
                             </div>
-                        
-                            <button className="btn btn-success btn-block loginbtn">Login</button>
-                            <a className="btn btn-default btn-block" href="#">Register</a>
-            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
